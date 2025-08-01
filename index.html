@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="{{project.meta.ogDescription}}">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="{{project.meta.robotsMeta}}">
+      
+       <title>{{project.seoTitle}}</title>
+      <!-- SEO Description -->
+      <meta name="description" content="{{project.seoDescription}}">
+      <!-- Performance optimization: Preload critical resources -->
+      <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+      <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" as="style">
+      
+      <!-- {headerScripts} -->
+
+      <!-- Core CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+             colors: {
+                primary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                secondary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                accent: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+              },
+              fontFamily: {
+                sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                heading: ['Montserrat', 'Inter', 'system-ui', 'sans-serif'],
+              },
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem',
+              },
+              animation: {
+                'fade-in': 'fadeIn 0.5s ease-in',
+                'fade-out': 'fadeOut 0.5s ease-out',
+                'slide-up': 'slideUp 0.5s ease-out',
+                'slide-down': 'slideDown 0.5s ease-out',
+                'slide-left': 'slideLeft 0.5s ease-out',
+                'slide-right': 'slideRight 0.5s ease-out',
+                'scale-in': 'scaleIn 0.5s ease-out',
+                'scale-out': 'scaleOut 0.5s ease-out',
+                'spin-slow': 'spin 3s linear infinite',
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'bounce-slow': 'bounce 3s infinite',
+                'float': 'float 3s ease-in-out infinite',
+              },
+              keyframes: {
+                fadeIn: {
+                  '0%': { opacity: '0' },
+                  '100%': { opacity: '1' },
+                },
+                fadeOut: {
+                  '0%': { opacity: '1' },
+                  '100%': { opacity: '0' },
+                },
+                slideUp: {
+                  '0%': { transform: 'translateY(20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideDown: {
+                  '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideLeft: {
+                  '0%': { transform: 'translateX(20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                slideRight: {
+                  '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                scaleIn: {
+                  '0%': { transform: 'scale(0.9)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                scaleOut: {
+                  '0%': { transform: 'scale(1.1)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                float: {
+                  '0%, 100%': { transform: 'translateY(0)' },
+                  '50%': { transform: 'translateY(-10px)' },
+                },
+              },
+              aspectRatio: {
+                'portrait': '3/4',
+                'landscape': '4/3',
+                'ultrawide': '21/9',
+              },
+            },
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled'],
+            },
+          },
+        }
+      </script>
+
+      <!-- Utilities and Components -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+      
+      <!-- Optimized Font Loading -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+      
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- Dynamic Meta Tags -->
+      <meta name="description" content="{{project.meta.ogDescription}}">
+      <meta name="keywords" content="{{project.meta.keywords}}">
+      <meta name="robots" content="{{project.meta.robotsMeta}}">
+      <meta name="google-site-verification" content="{{project.meta.googleVerification}}">
+      <meta name="baidu-verification" content="{{project.meta.baiduVerification}}">
+      <meta name="yandex-verification" content="{{project.meta.yandexVerification}}">
+      <meta name="bing-verification" content="{{project.meta.bingVerification}}">
+      <meta property="og:title" content="{{project.meta.ogTitle}}">
+      <meta property="og:description" content="{{project.meta.ogDescription}}">
+      <meta property="og:image" content="{{project.meta.ogImage}}">
+      <meta property="og:type" content="website">
+      <meta property="og:locale" content="en_US">
+      <meta property="og:site_name" content="{{project.name}}">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="{{project.meta.ogTitle}}">
+      <meta name="twitter:description" content="{{project.meta.ogDescription}}">
+      <meta name="twitter:image" content="{{project.meta.ogImage}}">
+
+      <!-- Base Styles -->
+      <style>
+      * {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Webkit browsers like Chrome, Safari, newer Edge */
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+          width: 0px;
+        }
+        
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+          background: #666;
+        }
+
+        /* Remove tap highlight on mobile */
+        * {
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Improve text rendering */
+        body {
+          text-rendering: optimizeLegibility;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Focus outline styles */
+        :focus-visible {
+          outline: 2px solid currentColor;
+          outline-offset: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+          .no-print {
+            display: none !important;
+          }
+          
+          a[href]:after {
+            content: " (" attr(href) ")";
+          }
+        }
+      </style>
+
+      <!-- Enhanced Image Handler -->
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                  const tempImage = new Image();
+                  tempImage.onload = () => {
+                    img.src = img.dataset.src;
+                    img.classList.remove('opacity-0');
+                    img.classList.add('opacity-100');
+                  };
+                  tempImage.src = img.dataset.src;
+                  img.removeAttribute('data-src');
+                  observer.unobserve(img);
+                }
+              }
+            });
+          }, {
+            rootMargin: '50px 0px',
+            threshold: 0.01
+          });
+
+          const loadImage = (img) => {
+            if ('loading' in HTMLImageElement.prototype) {
+              img.loading = 'lazy';
+            }
+            
+            img.classList.add('transition-opacity', 'duration-300', 'opacity-0');
+            
+            img.onerror = () => {
+              const width = img.getAttribute('width') || img.clientWidth || 300;
+              const height = img.getAttribute('height') || img.clientHeight || 200;
+              img.src = `https://placehold.co/${width}x${height}/DEDEDE/555555?text=Image+Unavailable`;
+              img.alt = 'Image unavailable';
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100', 'error-image');
+            };
+
+            if (img.dataset.src) {
+              imageObserver.observe(img);
+            } else {
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100');
+            }
+          };
+
+          document.querySelectorAll('img[data-src], img:not([data-src])').forEach(loadImage);
+
+          // Watch for dynamically added images
+          new MutationObserver((mutations) => {
+            mutations.forEach(mutation => {
+              mutation.addedNodes.forEach(node => {
+                if (node.nodeType === 1) {
+                  if (node.tagName === 'IMG') {
+                    loadImage(node);
+                  }
+                  node.querySelectorAll('img').forEach(loadImage);
+                }
+              });
+            });
+          }).observe(document.body, {
+            childList: true,
+            subtree: true
+          });
+        });
+
+        // Performance monitoring
+        if ('performance' in window && 'PerformanceObserver' in window) {
+          // Create performance observer
+          const observer = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            entries.forEach((entry) => {
+              if (entry.entryType === 'largest-contentful-paint') {
+                // console.log(`LCP: ${entry.startTime}ms`);
+              }
+              if (entry.entryType === 'first-input') {
+                // console.log(`FID: ${entry.processingStart - entry.startTime}ms`);
+              }
+              if (entry.entryType === 'layout-shift') {
+                // console.log(`CLS: ${entry.value}`);
+              }
+            });
+          });
+
+          // Observe performance metrics
+          observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+          // Log basic performance metrics
+          window.addEventListener('load', () => {
+            const timing = performance.getEntriesByType('navigation')[0];
+            console.log({
+              'DNS Lookup': timing.domainLookupEnd - timing.domainLookupStart,
+              'TCP Connection': timing.connectEnd - timing.connectStart,
+              'DOM Content Loaded': timing.domContentLoadedEventEnd - timing.navigationStart,
+              'Page Load': timing.loadEventEnd - timing.navigationStart
+            });
+          });
+        }
+
+        // Handle offline/online status
+        window.addEventListener('online', () => {
+          document.body.classList.remove('offline');
+          console.log('Connection restored');
+        });
+        
+        window.addEventListener('offline', () => {
+          document.body.classList.add('offline');
+          console.log('Connection lost');
+        });
+      </script>
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Header -->
+      <header class="relative z-50 bg-white dark:bg-gray-900">
+        <!-- Header content goes here -->
+      </header>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative ">
+        <!-- Content will be injected here -->
+      </main>
+
+      <!-- {bodyScripts} -->
+
+   </body>
+</html><element id="8e939b7b-702c-46c3-a981-d734bbec3058" data-section-id="8e939b7b-702c-46c3-a981-d734bbec3058">
+
+<htmlCode>
+<div id="root">
+  <section id="navbar" class="fixed w-full z-50">
+    <nav class="bg-neutral-900/90 backdrop-blur-md border-b border-neutral-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <span class="text-2xl font-bold bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent">SmartLife</span>
+            </div>
+          </div>
+          
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-center space-x-8">
+              <a href="#features" class="text-neutral-300 hover:text-white px-3 py-2 text-sm font-medium">Features</a>
+              <a href="#aiCapabilities" class="text-neutral-300 hover:text-white px-3 py-2 text-sm font-medium">AI Features</a>
+              <a href="#appShowcase" class="text-neutral-300 hover:text-white px-3 py-2 text-sm font-medium">App</a>
+              <a href="#testimonials" class="text-neutral-300 hover:text-white px-3 py-2 text-sm font-medium">Testimonials</a>
+              <a href="#pricing" class="text-neutral-300 hover:text-white px-3 py-2 text-sm font-medium">Pricing</a>
+              <a href="#download" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium animate__animated animate__pulse animate__infinite">Download Now</a>
+            </div>
+          </div>
+          
+          <div class="md:hidden">
+            <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-neutral-400 hover:text-white hover:bg-neutral-800 focus:outline-none">
+              <span class="sr-only">Open main menu</span>
+              <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="hidden md:hidden bg-neutral-900/90 backdrop-blur-md">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a href="#features" class="text-neutral-300 hover:text-white block px-3 py-2 text-base font-medium">Features</a>
+          <a href="#aiCapabilities" class="text-neutral-300 hover:text-white block px-3 py-2 text-base font-medium">AI Features</a>
+          <a href="#appShowcase" class="text-neutral-300 hover:text-white block px-3 py-2 text-base font-medium">App</a>
+          <a href="#testimonials" class="text-neutral-300 hover:text-white block px-3 py-2 text-base font-medium">Testimonials</a>
+          <a href="#pricing" class="text-neutral-300 hover:text-white block px-3 py-2 text-base font-medium">Pricing</a>
+          <a href="#download" class="bg-blue-500 hover:bg-blue-600 text-white block px-4 py-2 rounded-lg text-base font-medium mt-4 animate__animated animate__pulse animate__infinite">Download Now</a>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    let isMenuOpen = false;
+
+    mobileMenuButton.addEventListener('click', () => {
+      isMenuOpen = !isMenuOpen;
+      if (isMenuOpen) {
+        mobileMenu.classList.remove('hidden');
+      } else {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+
+    // Close mobile menu when clicking menu items
+    const mobileMenuItems = mobileMenu.querySelectorAll('a');
+    mobileMenuItems.forEach(item => {
+      item.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        isMenuOpen = false;
+      });
+    });
+
+    // Add scroll event listener to change navbar background
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 0) {
+        navbar.classList.add('shadow-lg');
+      } else {
+        navbar.classList.remove('shadow-lg');
+      }
+    });
+  </script>
+</div>
+</htmlCode></element><element id="780a89eb-bf3a-4e62-91f0-e3975c01bf28" data-section-id="780a89eb-bf3a-4e62-91f0-e3975c01bf28">
+
+<htmlCode>
+<div id="root">
+  <section id="hero" class="min-h-[70vh] bg-neutral-900 relative overflow-hidden pt-16">
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-teal-500/20"></div>
+    
+    <!-- Animated background shapes -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute -top-4 -right-4 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+      <div class="absolute top-1/2 -left-4 w-72 h-72 bg-teal-500/10 rounded-full blur-3xl animate-pulse"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative pt-20 lg:pt-28">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="text-center lg:text-left animate__animated animate__fadeInLeft">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+            Your Personal AI Assistant for
+            <span class="bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent">Finance, Health & Lifestyle</span>
+          </h1>
+          
+          <p class="text-neutral-300 text-lg md:text-xl mb-8">
+            Transform your daily life with our all-in-one smart assistant. Manage finances, track health, and optimize your lifestyle with AI-powered insights.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start relative z-10">
+            <a href="./app.html" class="inline-flex items-center justify-center px-8 py-3 text-base font-medium text-white bg-blue-500 hover:bg-blue-600 rounded-lg shadow-lg pointer-events-auto">
+              Get Started
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </a>
+            <a href="./app.html" class="inline-flex items-center justify-center px-8 py-3 text-base font-medium text-white bg-neutral-800 hover:bg-neutral-700 rounded-lg pointer-events-auto">
+              Learn More
+            </a>
+          </div>
+        </div>
+
+        <div class="relative animate__animated animate__fadeInRight">
+          <div class="relative w-full max-w-lg mx-auto">
+            <div class="absolute top-0 -left-4 w-72 h-72 bg-purple-500/30 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+            <div class="absolute top-0 -right-4 w-72 h-72 bg-yellow-500/30 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+            <div class="absolute -bottom-8 left-20 w-72 h-72 bg-pink-500/30 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+            <div class="relative">
+              <div class="relative bg-neutral-800/50 backdrop-blur-xl rounded-2xl shadow-2xl p-8 border border-neutral-700">
+                <div class="p-4 bg-neutral-900/50 rounded-xl mb-4">
+                  <div class="h-2 w-24 bg-blue-500/50 rounded mb-2"></div>
+                  <div class="h-2 w-16 bg-teal-500/50 rounded"></div>
+                </div>
+                <div class="p-4 bg-neutral-900/50 rounded-xl mb-4">
+                  <div class="h-2 w-20 bg-purple-500/50 rounded mb-2"></div>
+                  <div class="h-2 w-28 bg-pink-500/50 rounded"></div>
+                </div>
+                <div class="p-4 bg-neutral-900/50 rounded-xl">
+                  <div class="h-2 w-16 bg-yellow-500/50 rounded mb-2"></div>
+                  <div class="h-2 w-24 bg-orange-500/50 rounded"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-neutral-900 to-transparent"></div>
+  </section>
+
+  <style>
+    @keyframes blob {
+      0% { transform: translate(0px, 0px) scale(1); }
+      33% { transform: translate(30px, -50px) scale(1.1); }
+      66% { transform: translate(-20px, 20px) scale(0.9); }
+      100% { transform: translate(0px, 0px) scale(1); }
+    }
+    .animate-blob {
+      animation: blob 7s infinite;
+    }
+    .animation-delay-2000 {
+      animation-delay: 2s;
+    }
+    .animation-delay-4000 {
+      animation-delay: 4s;
+    }
+  </style>
+</div>
+</htmlCode></element><element id="9324c43e-789a-4bc0-acf9-c26530b706f2" data-section-id="9324c43e-789a-4bc0-acf9-c26530b706f2">
+
+<htmlCode>
+<div id="root">
+  <section id="features" class="py-20 bg-neutral-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animate__animated animate__fadeIn">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">All-In-One Smart Solution</h2>
+        <p class="text-neutral-300 text-lg max-w-2xl mx-auto">Experience the power of AI-driven insights across your finance, health, and lifestyle needs.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Financial Management -->
+        <div class="bg-neutral-900/50 backdrop-blur-sm p-6 rounded-xl border border-neutral-700 hover:border-blue-500/50 transition-all duration-300 group animate__animated animate__fadeInUp">
+          <div class="bg-blue-500/10 rounded-lg p-3 w-12 h-12 flex items-center justify-center mb-4 group-hover:bg-blue-500/20 transition-all duration-300">
+            <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">Smart Financial Planning</h3>
+          <p class="text-neutral-400">AI-powered budgeting, investment tracking, and personalized financial advice at your fingertips.</p>
+        </div>
+
+        <!-- Health Tracking -->
+        <div class="bg-neutral-900/50 backdrop-blur-sm p-6 rounded-xl border border-neutral-700 hover:border-teal-500/50 transition-all duration-300 group animate__animated animate__fadeInUp animation-delay-200">
+          <div class="bg-teal-500/10 rounded-lg p-3 w-12 h-12 flex items-center justify-center mb-4 group-hover:bg-teal-500/20 transition-all duration-300">
+            <svg class="w-6 h-6 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">Health & Wellness</h3>
+          <p class="text-neutral-400">Track fitness goals, monitor vital signs, and receive personalized health recommendations.</p>
+        </div>
+
+        <!-- Lifestyle Management -->
+        <div class="bg-neutral-900/50 backdrop-blur-sm p-6 rounded-xl border border-neutral-700 hover:border-purple-500/50 transition-all duration-300 group animate__animated animate__fadeInUp animation-delay-400">
+          <div class="bg-purple-500/10 rounded-lg p-3 w-12 h-12 flex items-center justify-center mb-4 group-hover:bg-purple-500/20 transition-all duration-300">
+            <svg class="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">Lifestyle Optimization</h3>
+          <p class="text-neutral-400">Smart scheduling, habit tracking, and AI-driven recommendations for better living.</p>
+        </div>
+
+        <!-- Data Security -->
+        <div class="bg-neutral-900/50 backdrop-blur-sm p-6 rounded-xl border border-neutral-700 hover:border-green-500/50 transition-all duration-300 group animate__animated animate__fadeInUp">
+          <div class="bg-green-500/10 rounded-lg p-3 w-12 h-12 flex items-center justify-center mb-4 group-hover:bg-green-500/20 transition-all duration-300">
+            <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">Advanced Security</h3>
+          <p class="text-neutral-400">Bank-grade encryption and privacy protection for your sensitive data.</p>
+        </div>
+
+        <!-- Smart Automation -->
+        <div class="bg-neutral-900/50 backdrop-blur-sm p-6 rounded-xl border border-neutral-700 hover:border-pink-500/50 transition-all duration-300 group animate__animated animate__fadeInUp animation-delay-200">
+          <div class="bg-pink-500/10 rounded-lg p-3 w-12 h-12 flex items-center justify-center mb-4 group-hover:bg-pink-500/20 transition-all duration-300">
+            <svg class="w-6 h-6 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">Smart Automation</h3>
+          <p class="text-neutral-400">Automate routine tasks and get intelligent reminders for important activities.</p>
+        </div>
+
+        <!-- Analytics -->
+        <div class="bg-neutral-900/50 backdrop-blur-sm p-6 rounded-xl border border-neutral-700 hover:border-yellow-500/50 transition-all duration-300 group animate__animated animate__fadeInUp animation-delay-400">
+          <div class="bg-yellow-500/10 rounded-lg p-3 w-12 h-12 flex items-center justify-center mb-4 group-hover:bg-yellow-500/20 transition-all duration-300">
+            <svg class="w-6 h-6 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">Advanced Analytics</h3>
+          <p class="text-neutral-400">Comprehensive insights and reports to track your progress across all areas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .animation-delay-200 {
+      animation-delay: 0.2s;
+    }
+    .animation-delay-400 {
+      animation-delay: 0.4s;
+    }
+  </style>
+</div>
+</htmlCode></element><element id="fe816a22-de18-475e-a9b0-cb477825304f" data-section-id="fe816a22-de18-475e-a9b0-cb477825304f">
+
+<htmlCode>
+<div id="root">
+  <section id="aiCapabilities" class="py-20 bg-neutral-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animate__animated animate__fadeIn">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">AI-Powered Intelligence</h2>
+        <p class="text-neutral-300 text-lg max-w-2xl mx-auto">Experience the next generation of personal assistance with our advanced AI capabilities</p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="relative animate__animated animate__fadeInLeft">
+          <div class="relative bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl p-8 backdrop-blur-xl border border-neutral-800">
+            <div class="space-y-6">
+              <!-- AI Activity Cards -->
+              <div class="bg-neutral-800/50 rounded-lg p-4 transform hover:scale-105 transition-transform duration-300">
+                <div class="flex items-center">
+                  <div class="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center">
+                    <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div class="ml-4">
+                    <h3 class="text-white font-medium">Predictive Analysis</h3>
+                    <p class="text-neutral-400 text-sm">Real-time financial forecasting and health predictions</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-neutral-800/50 rounded-lg p-4 transform hover:scale-105 transition-transform duration-300">
+                <div class="flex items-center">
+                  <div class="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center">
+                    <svg class="w-5 h-5 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <div class="ml-4">
+                    <h3 class="text-white font-medium">Smart Recommendations</h3>
+                    <p class="text-neutral-400 text-sm">Personalized suggestions based on your behavior</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-neutral-800/50 rounded-lg p-4 transform hover:scale-105 transition-transform duration-300">
+                <div class="flex items-center">
+                  <div class="w-10 h-10 rounded-full bg-teal-500/20 flex items-center justify-center">
+                    <svg class="w-5 h-5 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div class="ml-4">
+                    <h3 class="text-white font-medium">Automated Learning</h3>
+                    <p class="text-neutral-400 text-sm">Continuous improvement through usage patterns</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Decorative Elements -->
+            <div class="absolute -top-4 -right-4 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-4 -left-4 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl"></div>
+          </div>
+        </div>
+
+        <div class="space-y-8 animate__animated animate__fadeInRight">
+          <div class="space-y-4">
+            <h3 class="text-2xl font-bold text-white">Natural Language Processing</h3>
+            <p class="text-neutral-300">Communicate naturally with our AI assistant through text or voice commands.</p>
+            <div class="h-2 w-full bg-neutral-800 rounded-full">
+              <div class="h-2 w-[95%] bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-pulse"></div>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <h3 class="text-2xl font-bold text-white">Pattern Recognition</h3>
+            <p class="text-neutral-300">Advanced algorithms that learn from your habits and optimize recommendations.</p>
+            <div class="h-2 w-full bg-neutral-800 rounded-full">
+              <div class="h-2 w-[90%] bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-pulse"></div>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <h3 class="text-2xl font-bold text-white">Predictive Analytics</h3>
+            <p class="text-neutral-300">Forecast trends and potential outcomes based on historical data and patterns.</p>
+            <div class="h-2 w-full bg-neutral-800 rounded-full">
+              <div class="h-2 w-[85%] bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-pulse"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="7d93f8f6-10b6-43a3-8623-8e82432c909e" data-section-id="7d93f8f6-10b6-43a3-8623-8e82432c909e">
+
+<htmlCode>
+<div id="root">
+  <section id="appShowcase" class="py-20 bg-neutral-800 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animate__animated animate__fadeIn">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Experience the App</h2>
+        <p class="text-neutral-300 text-lg max-w-2xl mx-auto">Seamlessly manage your life with our intuitive interface and powerful features</p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="space-y-8 animate__animated animate__fadeInLeft">
+          <!-- App Features Accordion -->
+          <div class="space-y-4">
+            <div class="bg-neutral-900/50 rounded-xl p-4 hover:bg-neutral-900 transition-all cursor-pointer group">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                  <div class="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center">
+                    <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                  </div>
+                  <h3 class="ml-4 text-lg font-semibold text-white">Financial Dashboard</h3>
+                </div>
+                <span class="text-blue-500 group-hover:translate-x-2 transition-transform">→</span>
+              </div>
+              <p class="mt-2 ml-14 text-neutral-400">Real-time tracking of your expenses, investments, and financial goals</p>
+            </div>
+
+            <div class="bg-neutral-900/50 rounded-xl p-4 hover:bg-neutral-900 transition-all cursor-pointer group">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                  <div class="w-10 h-10 rounded-full bg-teal-500/20 flex items-center justify-center">
+                    <svg class="w-5 h-5 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                    </svg>
+                  </div>
+                  <h3 class="ml-4 text-lg font-semibold text-white">Health Tracking</h3>
+                </div>
+                <span class="text-teal-500 group-hover:translate-x-2 transition-transform">→</span>
+              </div>
+              <p class="mt-2 ml-14 text-neutral-400">Monitor your fitness, nutrition, and wellness metrics in one place</p>
+            </div>
+
+            <div class="bg-neutral-900/50 rounded-xl p-4 hover:bg-neutral-900 transition-all cursor-pointer group">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                  <div class="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center">
+                    <svg class="w-5 h-5 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                  </div>
+                  <h3 class="ml-4 text-lg font-semibold text-white">Lifestyle Management</h3>
+                </div>
+                <span class="text-purple-500 group-hover:translate-x-2 transition-transform">→</span>
+              </div>
+              <p class="mt-2 ml-14 text-neutral-400">Smart scheduling and habit tracking with AI-powered insights</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative animate__animated animate__fadeInRight">
+          <!-- Phone Frame -->
+          <div class="relative mx-auto w-[300px] h-[600px] bg-neutral-900 rounded-[3rem] border-8 border-neutral-700 shadow-2xl">
+            <!-- Screen Content -->
+            <div class="absolute top-0 left-0 right-0 bottom-0 bg-neutral-900 rounded-[2.5rem] overflow-hidden">
+              <!-- App Interface -->
+              <div class="relative h-full bg-gradient-to-b from-neutral-900 to-neutral-800">
+                <!-- Status Bar -->
+                <div class="h-6 bg-black flex items-center justify-between px-6">
+                  <span class="text-white text-xs">9:41</span>
+                  <div class="flex items-center space-x-2">
+                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                    </svg>
+                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                    </svg>
+                  </div>
+                </div>
+
+                <!-- App Content -->
+                <div class="p-4 space-y-4">
+                  <div class="bg-blue-500/10 rounded-xl p-4">
+                    <div class="h-2 w-24 bg-blue-500/30 rounded mb-2"></div>
+                    <div class="h-2 w-16 bg-blue-500/30 rounded"></div>
+                  </div>
+                  <div class="bg-teal-500/10 rounded-xl p-4">
+                    <div class="h-2 w-20 bg-teal-500/30 rounded mb-2"></div>
+                    <div class="h-2 w-28 bg-teal-500/30 rounded"></div>
+                  </div>
+                  <div class="bg-purple-500/10 rounded-xl p-4">
+                    <div class="h-2 w-16 bg-purple-500/30 rounded mb-2"></div>
+                    <div class="h-2 w-24 bg-purple-500/30 rounded"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Decorative Elements -->
+          <div class="absolute -top-4 -right-4 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div class="absolute -bottom-4 -left-4 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="771023d3-afd4-498d-a62e-0c7ac458a458" data-section-id="771023d3-afd4-498d-a62e-0c7ac458a458">
+
+<htmlCode>
+<div id="root">
+  <section id="testimonials" class="py-20 bg-neutral-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animate__animated animate__fadeIn">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">What Our Users Say</h2>
+        <p class="text-neutral-300 text-lg max-w-2xl mx-auto">Real experiences from people who transformed their lives with our app</p>
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-8 mb-12">
+        <!-- Testimonial Cards -->
+        <div class="testimonial-card animate__animated animate__fadeInUp">
+          <div class="relative p-6 bg-neutral-800/50 backdrop-blur-xl rounded-2xl border border-neutral-700 hover:border-blue-500/50 transition-all group">
+            <div class="absolute -top-4 -right-4 w-24 h-24 bg-blue-500/10 rounded-full blur-2xl group-hover:bg-blue-500/20 transition-all"></div>
+            
+            <div class="relative">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 bg-neutral-700 rounded-full flex items-center justify-center">
+                  <span class="text-xl font-bold text-white">SJ</span>
+                </div>
+                <div class="ml-4">
+                  <h4 class="text-white font-semibold">Sarah Johnson</h4>
+                  <p class="text-neutral-400 text-sm">Financial Analyst</p>
+                </div>
+              </div>
+              <p class="text-neutral-300 mb-4">"The AI-powered financial insights have completely transformed how I manage my investments. The predictions are incredibly accurate!"</p>
+              <div class="flex text-yellow-500">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card animate__animated animate__fadeInUp animation-delay-200">
+          <div class="relative p-6 bg-neutral-800/50 backdrop-blur-xl rounded-2xl border border-neutral-700 hover:border-purple-500/50 transition-all group">
+            <div class="absolute -top-4 -right-4 w-24 h-24 bg-purple-500/10 rounded-full blur-2xl group-hover:bg-purple-500/20 transition-all"></div>
+            
+            <div class="relative">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 bg-neutral-700 rounded-full flex items-center justify-center">
+                  <span class="text-xl font-bold text-white">MT</span>
+                </div>
+                <div class="ml-4">
+                  <h4 class="text-white font-semibold">Mike Thompson</h4>
+                  <p class="text-neutral-400 text-sm">Fitness Enthusiast</p>
+                </div>
+              </div>
+              <p class="text-neutral-300 mb-4">"The health tracking features are fantastic! The AI suggestions have helped me optimize my workout routine and nutrition."</p>
+              <div class="flex text-yellow-500">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card animate__animated animate__fadeInUp animation-delay-400">
+          <div class="relative p-6 bg-neutral-800/50 backdrop-blur-xl rounded-2xl border border-neutral-700 hover:border-teal-500/50 transition-all group">
+            <div class="absolute -top-4 -right-4 w-24 h-24 bg-teal-500/10 rounded-full blur-2xl group-hover:bg-teal-500/20 transition-all"></div>
+            
+            <div class="relative">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 bg-neutral-700 rounded-full flex items-center justify-center">
+                  <span class="text-xl font-bold text-white">AP</span>
+                </div>
+                <div class="ml-4">
+                  <h4 class="text-white font-semibold">Amanda Patel</h4>
+                  <p class="text-neutral-400 text-sm">Entrepreneur</p>
+                </div>
+              </div>
+              <p class="text-neutral-300 mb-4">"Finally, an app that brings everything together! The lifestyle management features have helped me maintain work-life balance."</p>
+              <div class="flex text-yellow-500">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .animation-delay-200 {
+      animation-delay: 0.2s;
+    }
+    .animation-delay-400 {
+      animation-delay: 0.4s;
+    }
+  </style>
+</div>
+</htmlCode></element><element id="d646303f-34c7-4022-ad9a-3b2060268769" data-section-id="d646303f-34c7-4022-ad9a-3b2060268769">
+
+<htmlCode>
+<div id="root">
+  <section id="pricing" class="py-20 bg-neutral-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animate__animated animate__fadeIn">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Simple, Transparent Pricing</h2>
+        <p class="text-neutral-300 text-lg max-w-2xl mx-auto">Choose the perfect plan for your lifestyle needs</p>
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <!-- Basic Plan -->
+        <div class="relative animate__animated animate__fadeInUp">
+          <div class="bg-neutral-900/50 backdrop-blur-xl rounded-2xl border border-neutral-700 hover:border-blue-500/50 transition-all p-8 h-full group">
+            <div class="absolute -top-4 -right-4 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl group-hover:bg-blue-500/20 transition-all"></div>
+            
+            <div class="relative">
+              <h3 class="text-xl font-semibold text-white mb-4">Basic</h3>
+              <div class="flex items-baseline mb-8">
+                <span class="text-4xl font-bold text-white">$9</span>
+                <span class="text-neutral-400 ml-2">/month</span>
+              </div>
+              
+              <ul class="space-y-4 mb-8">
+                <li class="flex items-center text-neutral-300">
+                  <svg class="w-5 h-5 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Basic Financial Tracking
+                </li>
+                <li class="flex items-center text-neutral-300">
+                  <svg class="w-5 h-5 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Health Metrics Dashboard
+                </li>
+                <li class="flex items-center text-neutral-300">
+                  <svg class="w-5 h-5 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Basic AI Insights
+                </li>
+              </ul>
+              
+              <a href="./app.html" class="w-full py-3 px-6 rounded-lg bg-neutral-700 hover:bg-neutral-600 text-white font-medium transition-all">
+                Get Started
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pro Plan -->
+        <div class="relative animate__animated animate__fadeInUp animation-delay-200">
+          <div class="bg-gradient-to-br from-blue-500/10 to-purple-500/10 backdrop-blur-xl rounded-2xl border border-blue-500/50 hover:border-purple-500/50 transition-all p-8 h-full transform scale-105 group">
+            <div class="absolute -top-4 -right-4 w-32 h-32 bg-purple-500/20 rounded-full blur-2xl group-hover:bg-purple-500/30 transition-all"></div>
+            
+            <div class="relative">
+              <span class="px-3 py-1 text-xs font-semibold text-white bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-4 inline-block">MOST POPULAR</span>
+              <h3 class="text-xl font-semibold text-white mb-4">Pro</h3>
+              <div class="flex items-baseline mb-8">
+                <span class="text-4xl font-bold text-white">$19</span>
+                <span class="text-neutral-300 ml-2">/month</span>
+              </div>
+              
+              <ul class="space-y-4 mb-8">
+                <li class="flex items-center text-neutral-300">
+                  <svg class="w-5 h-5 text-purple-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Advanced Financial Planning
+                </li>
+                <li class="flex items-center text-neutral-300">
+                  <svg class="w-5 h-5 text-purple-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Comprehensive Health Tracking
+                </li>
+                <li class="flex items-center text-neutral-300">
+                  <svg class="w-5 h-5 text-purple-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Advanced AI Recommendations
+                </li>
+                <li class="flex items-center text-neutral-300">
+                  <svg class="w-5 h-5 text-purple-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Priority Support
+                </li>
+              </ul>
+              
+              <button class="w-full py-3 px-6 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-medium transition-all">
+                Get Pro
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Premium Plan -->
+        <div class="relative animate__animated animate__fadeInUp animation-delay-400">
+          <div class="bg-neutral-900/50 backdrop-blur-xl rounded-2xl border border-neutral-700 hover:border-teal-500/50 transition-all p-8 h-full group">
+            <div class="absolute -top-4 -right-4 w-32 h-32 bg-teal-500/10 rounded-full blur-2xl group-hover:bg-teal-500/20 transition-all"></div>
+            
+            <div class="relative">
+              <h3 class="text-xl font-semibold text-white mb-4">Premium</h3>
+              <div class="flex items-baseline mb-8">
+                <span class="text-4xl font-bold text-white">$29</span>
+                <span class="text-neutral-400 ml-2">/month</span>
+              </div>
+              
+              <ul class="space-y-4 mb-8">
+                <li class="flex items-center text-neutral-300">
+                  <svg class="w-5 h-5 text-teal-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  All Pro Features
+                </li>
+                <li class="flex items-center text-neutral-300">
+                  <svg class="w-5 h-5 text-teal-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Family Account Support
+                </li>
+                <li class="flex items-center text-neutral-300">
+                  <svg class="w-5 h-5 text-teal-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Custom AI Training
+                </li>
+                <li class="flex items-center text-neutral-300">
+                  <svg class="w-5 h-5 text-teal-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  24/7 Premium Support
+                </li>
+              </ul>
+              
+              <button class="w-full py-3 px-6 rounded-lg bg-neutral-700 hover:bg-neutral-600 text-white font-medium transition-all">
+                Get Premium
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .animation-delay-200 {
+      animation-delay: 0.2s;
+    }
+    .animation-delay-400 {
+      animation-delay: 0.4s;
+    }
+  </style>
+</div>
+</htmlCode></element><element id="c3adb393-3971-4d9d-a7d2-5350c191242c" data-section-id="c3adb393-3971-4d9d-a7d2-5350c191242c">
+
+<htmlCode>
+<div id="root">
+  <section id="faq" class="py-20 bg-neutral-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animate__animated animate__fadeIn">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
+        <p class="text-neutral-300 text-lg max-w-2xl mx-auto">Everything you need to know about our AI-powered app</p>
+      </div>
+
+      <div class="max-w-3xl mx-auto divide-y divide-neutral-800">
+        <!-- FAQ Item 1 -->
+        <div class="py-6 animate__animated animate__fadeInUp">
+          <button class="faq-button w-full flex justify-between items-center text-left focus:outline-none">
+            <h3 class="text-lg font-medium text-white">How does the AI assistant work?</h3>
+            <svg class="faq-icon w-6 h-6 text-neutral-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="faq-answer mt-4 hidden">
+            <p class="text-neutral-300">Our AI assistant uses advanced machine learning algorithms to analyze your patterns and provide personalized recommendations. It learns from your daily activities, financial transactions, and health metrics to offer intelligent insights and suggestions.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="py-6 animate__animated animate__fadeInUp animation-delay-100">
+          <button class="faq-button w-full flex justify-between items-center text-left focus:outline-none">
+            <h3 class="text-lg font-medium text-white">Is my data secure and private?</h3>
+            <svg class="faq-icon w-6 h-6 text-neutral-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="faq-answer mt-4 hidden">
+            <p class="text-neutral-300">Yes, we take data security very seriously. We use bank-grade encryption and follow strict privacy protocols. Your data is encrypted both in transit and at rest, and we never share your personal information with third parties.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="py-6 animate__animated animate__fadeInUp animation-delay-200">
+          <button class="faq-button w-full flex justify-between items-center text-left focus:outline-none">
+            <h3 class="text-lg font-medium text-white">Can I use the app offline?</h3>
+            <svg class="faq-icon w-6 h-6 text-neutral-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="faq-answer mt-4 hidden">
+            <p class="text-neutral-300">Yes, many features of the app are available offline. Your data is synced automatically when you are back online.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="py-6 animate__animated animate__fadeInUp animation-delay-300">
+          <button class="faq-button w-full flex justify-between items-center text-left focus:outline-none">
+            <h3 class="text-lg font-medium text-white">How can I contact support?</h3>
+            <svg class="faq-icon w-6 h-6 text-neutral-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="faq-answer mt-4 hidden">
+            <p class="text-neutral-300">You can contact support through the app or by visiting our website. We offer 24/7 support for all users.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 5 -->
+        <div class="py-6 animate__animated animate__fadeInUp animation-delay-400">
+          <button class="faq-button w-full flex justify-between items-center text-left focus:outline-none">
+            <h3 class="text-lg font-medium text-white">What is the refund policy?</h3>
+            <svg class="faq-icon w-6 h-6 text-neutral-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="faq-answer mt-4 hidden">
+            <p class="text-neutral-300">We offer a 30-day money-back guarantee. If you are not satisfied with the app, you can request a refund within 30 days of purchase.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element>
